@@ -7,6 +7,7 @@
   <title>Dominó FC</title>
   <meta name="description" content="Dominó FC">
   <meta name="author" content="Dominó FC" />
+
   <meta property="og:type" content="website" />
   <meta property="og:image"
     content="https://storage.googleapis.com/gpt-engineer-file-uploads/yZD1KRImcreqxhRPOxGH5ZdhoNH3/social-images/social-1775050872141-Design_sem_nome_(41).webp">
@@ -24,24 +25,122 @@
   <script type="module" crossorigin src="assets/index-CC_PrHGG.js"></script>
   <link rel="stylesheet" crossorigin href="assets/index-BKCEjY8c.css">
 
-  <!-- TikTok Pixel Code Start -->
-<script>
+  <!-- ESTILO DO OPT-IN -->
+  <style>
+    .optin-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+    }
+
+    .optin-box {
+      background: #111827;
+      padding: 20px;
+      border-radius: 14px;
+      width: 300px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    .optin-box h3 {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    .optin-box p {
+      font-size: 13px;
+      margin-bottom: 12px;
+      color: #cbd5f5;
+    }
+
+    .optin-form {
+      display: flex;
+      gap: 6px;
+    }
+
+    .optin-form input {
+      flex: 1;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+    }
+
+    .optin-form button {
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      background: #22c55e;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .optin-form button:hover {
+      background: #16a34a;
+    }
+
+    .optin-box small {
+      display: block;
+      margin-top: 8px;
+      font-size: 11px;
+      color: #94a3b8;
+    }
+  </style>
+
+  <!-- TikTok Pixel -->
+  <script>
 !function (w, d, t) {
   w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
 var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
 ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
 
-
   ttq.load('D7B742BC77UFKKV39GMG');
   ttq.page();
 }(window, document, 'ttq');
 </script>
-<!-- TikTok Pixel Code End -->
 
 </head>
 
 <body>
+
   <div id="root"></div>
+
+  <!-- 🔥 OPT-IN DE EMAIL -->
+  <div class="optin-container">
+    <div class="optin-box">
+      <h3>🔥 Promoções Dominó FC</h3>
+      <p>Receba ofertas e novidades exclusivas.</p>
+
+      <form class="optin-form" onsubmit="handleOptin(event)">
+        <input type="email" id="emailInput" placeholder="Seu e-mail" required>
+        <button type="submit">OK</button>
+      </form>
+
+      <small>Você pode sair quando quiser.</small>
+    </div>
+  </div>
+
+  <!-- SCRIPT SIMPLES (SALVA LOCAL) -->
+  <script>
+    function handleOptin(e) {
+      e.preventDefault();
+      const email = document.getElementById("emailInput").value;
+
+      if(email) {
+        console.log("Email capturado:", email);
+        alert("Cadastro realizado!");
+
+        // Aqui você pode enviar pra API depois
+        // fetch("SUA_API", { method: "POST", body: JSON.stringify({email}) })
+
+        document.getElementById("emailInput").value = "";
+      }
+    }
+  </script>
+
 </body>
 
 </html>
