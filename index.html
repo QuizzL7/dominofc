@@ -90,7 +90,7 @@
     }
   </style>
 
-  <!-- TikTok Pixel -->
+  <!-- TikTok Pixel Code -->
   <script>
 !function (w, d, t) {
   w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
@@ -108,7 +108,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 
   <div id="root"></div>
 
-  <!-- 🔥 OPT-IN DE EMAIL -->
+  <!-- 🔥 CAIXA DE EMAIL -->
   <div class="optin-container">
     <div class="optin-box">
       <h3>🔥 Promoções Dominó FC</h3>
@@ -123,18 +123,22 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     </div>
   </div>
 
-  <!-- SCRIPT SIMPLES (SALVA LOCAL) -->
+  <!-- SCRIPT DE CAPTURA -->
   <script>
     function handleOptin(e) {
       e.preventDefault();
       const email = document.getElementById("emailInput").value;
 
-      if(email) {
+      if (email) {
         console.log("Email capturado:", email);
         alert("Cadastro realizado!");
 
-        // Aqui você pode enviar pra API depois
-        // fetch("SUA_API", { method: "POST", body: JSON.stringify({email}) })
+        // Aqui você pode integrar depois com API
+        // fetch("SUA_API", {
+        //   method: "POST",
+        //   headers: { "Content-Type": "application/json" },
+        //   body: JSON.stringify({ email })
+        // });
 
         document.getElementById("emailInput").value = "";
       }
